@@ -1,4 +1,4 @@
-// Assigning the Variables
+// Assigning the html class and Id to JavaScript variables
 const container = document.querySelector('.container'),
     currentQuestion = document.getElementById('currentquestion'),
     allAvailableQuestions = document.getElementById('allquestions'),
@@ -11,39 +11,35 @@ const container = document.querySelector('.container'),
     btn = document.getElementById('btn');
 
 
-let currentScore = document.querySelector('.current-score'),
-    activeQuestion = 1;
-score = 0;
 
-
-// QuestionsBank
+// Question and answer data
 const myQuestions = [{
-        question: 'Is JavaScript a case-sensitive language?',
+        question: 'Which of the following is true about variable naming conventions in JavaScript?,
         options: [
-            'NO.',
-            'YES.',
-            "I Do not Know.",
+            'You should not use any of the JavaScript reserved keyword as variable name.',
+            'JavaScript variable names should not start with a numeral (0-9).',
+            "Both of the above",
             'None of the above',
         ],
-        answer: "YES."
+        answer: "Both of the above"
     },
     {
-        question: 'The follwoing are the advantages of JavaScript, except ?',
+        question: 'Which built-in method combines the text of two strings and returns a new string?',
         options: [
-            'Much server interaction.',
-            'Immediate feedback to the visitors.',
-            'Increased interactivity.',
-            'Less server interaction.',
+            'attach()',
+            'concat()',
+            'join()',
+            'append()',
         ],
-        answer: 'Much server interaction.',
+        answer: 'concat()',
     },
     {
-        question: 'Can you assign an anonymous function to a variable and pass it as an argument to another function?',
+        question: 'Which of the following function of Array object returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found?',
         options: [
-            'No! An anonymous function can\'t be assigned to a variable. It can only be passed as an argument to another function.',
-            'Yes! An anonymous function can be assigned to a variable. It can also be passed as an argument to another function.',
-            'I don\'t even know the answer',
-            'YES! An anonymous function can be assigned to a variable. and It can\'t be passed as an argument to another function.',
+            'indexOf()',
+            'join()',
+            'lastIndexOf()',
+            'map()',
         ],
         answer: 'Yes! An anonymous function can be assigned to a variable. It can also be passed as an argument to another function.'
     },
@@ -59,20 +55,22 @@ const myQuestions = [{
     },
 
     {
-        question: 'The built-in methods in JS except?',
+        question: 'Which of the following function of Boolean object returns the primitive value of the Boolean object?',
         options: [
-            'indexOf()',
-            'CharsAt()',
-            'unshift()',
-            'shift()',
+            'toSource()',
+            'valueOf()',
+            'changeCase(case)',
+            'toString()',
         ],
-        answer: 'CharsAt()',
+        answer: 'valueOf()',
     },
 ];
-
+let currentScore = document.querySelector('.current-score'),
+    activeQuestion = 1;
+score = 0;
 
 // Change text content
-const showContent = () => {
+const showAllContent = () => {
     currentQuestion.textContent = activeQuestion;
     allAvailableQuestions.textContent = myQuestions.length;
     currentScore.textContent = score;
@@ -83,9 +81,9 @@ const showContent = () => {
     optionFour.textContent = myQuestions[activeQuestion - 1].options[3];
 }
 
-showContent();
+showAllContent();
 
-// Display result
+// Displaying final result after completing the quiz
 const showResult = () => {
     container.classList.add('result', 'blue');
     const result = (score / myQuestions.length) * 100;
@@ -188,7 +186,7 @@ const checkOptionFour = () => {
     }
 }
 
-const nextQuestion = () => {
+const nextQuestionBtn = () => {
     if (activeQuestion < myQuestions.length) {
         activeQuestion = activeQuestion + 1;
         showContent();
@@ -206,4 +204,4 @@ optionOne.addEventListener('click', checkOptionOne);
 optionTwo.addEventListener('click', checkOptionTwo);
 optionThree.addEventListener('click', checkOptionThree);
 optionFour.addEventListener('click', checkOptionFour);
-btn.addEventListener('click', nextQuestion);
+btn.addEventListener('click', nextQuestionBtn);
