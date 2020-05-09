@@ -10,6 +10,9 @@ const container = document.querySelector('.container'),
     options = document.querySelectorAll('li'),
     btn = document.getElementById('btn');
 
+let currentScore = document.querySelector('.current-score'),
+    activeQuestion = 1;
+score = 0;
 
 
 // Question and answer data
@@ -65,12 +68,10 @@ const myQuestions = [{
         answer: 'valueOf()',
     },
 ];
-let currentScore = document.querySelector('.current-score'),
-    activeQuestion = 1;
-score = 0;
+
 
 // Change text content
-const showAllContent = () => {
+const showContent = () => {
     currentQuestion.textContent = activeQuestion;
     allAvailableQuestions.textContent = myQuestions.length;
     currentScore.textContent = score;
@@ -81,7 +82,7 @@ const showAllContent = () => {
     optionFour.textContent = myQuestions[activeQuestion - 1].options[3];
 }
 
-showAllContent();
+showContent();
 
 // Displaying final result after completing the quiz
 const showResult = () => {
@@ -186,7 +187,7 @@ const checkOptionFour = () => {
     }
 }
 
-const nextQuestionBtn = () => {
+const nextQuestion = () => {
     if (activeQuestion < myQuestions.length) {
         activeQuestion = activeQuestion + 1;
         showContent();
@@ -204,4 +205,4 @@ optionOne.addEventListener('click', checkOptionOne);
 optionTwo.addEventListener('click', checkOptionTwo);
 optionThree.addEventListener('click', checkOptionThree);
 optionFour.addEventListener('click', checkOptionFour);
-btn.addEventListener('click', nextQuestionBtn);
+btn.addEventListener('click', nextQuestion);
