@@ -112,12 +112,12 @@ a {
 
 @media (min-width: 768px) {
     html {
-        font-size: 5%;
+        font-size: 15px;
     }
     .container {
         width: 50%;
     }
     .btn {
-        width: 2rem;
+        width: 200px;
     }
 }
