@@ -17,7 +17,7 @@ score = 0;
 
 // Question and answer data
 const myQuestions = [{
-        question: 'Which of the following is true about variable naming conventions in JavaScript?,
+        question: 'Which of the following is true about variable naming conventions in JavaScript?',
         options: [
             'You should not use any of the JavaScript reserved keyword as variable name.',
             'JavaScript variable names should not start with a numeral (0-9).',
