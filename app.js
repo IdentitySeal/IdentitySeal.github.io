@@ -3,16 +3,14 @@ const container = document.querySelector('.container'),
     currentQuestion = document.getElementById('currentquestion'),
     allAvailableQuestions = document.getElementById('allquestions'),
     question = document.getElementById('questionbank'),
-    optionOne = document.querySelector('.option-1'),
-    optionTwo = document.querySelector('.option-2'),
-    optionThree = document.querySelector('.option-3'),
-    optionFour = document.querySelector('.option-4'),
+    optionOne = document.querySelector('.optionOne'),
+    optionTwo = document.querySelector('.optionTwo'),
+    optionThree = document.querySelector('.optionThree'),
+    optionFour = document.querySelector('.optionFour'),
     options = document.querySelectorAll('li'),
     btn = document.getElementById('btn');
 
-let currentScore = document.querySelector('.current-score'),
-    activeQuestion = 1;
-score = 0;
+
 
 
 // Question and answer data
@@ -44,7 +42,7 @@ const myQuestions = [{
             'lastIndexOf()',
             'map()',
         ],
-        answer: 'Yes! An anonymous function can be assigned to a variable. It can also be passed as an argument to another function.'
+        answer: 'lastIndexOf()'
     },
     {
         question: 'What is Callback?',
@@ -69,7 +67,10 @@ const myQuestions = [{
     },
 ];
 
-
+//initializing value into variables
+let currentScore = document.querySelector('.current-score'),
+    activeQuestion = 1;
+score = 0;
 // Change text content
 const showContent = () => {
     currentQuestion.textContent = activeQuestion;
@@ -86,10 +87,10 @@ showContent();
 
 // Displaying final result after completing the quiz
 const showResult = () => {
-    container.classList.add('result', 'blue');
+    container.classList.add('result', 'yellow');
     const result = (score / myQuestions.length) * 100;
     let remark;
-    if (result < 50) {
+    if (result <= 50) {
         result = 'Fair , work on yourself';
     } else if (result <= 75) {
         remark = 'Good';
@@ -101,7 +102,7 @@ const showResult = () => {
     container.innerHTML = `
    <h1>${result}%</h1> 
    <h3 class="center mb">${remark}</h3>
-   <a href="index.html" class="btn">RETRY?</a>
+   <a href="index.html" class="btn">Restart</a>
    `;
 }
 
