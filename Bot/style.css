@@ -1,0 +1,31 @@
+.messages div {
+    max-width: 60%;
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.messages .bot {
+    text-align: left;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: auto;
+    background: blue;
+    color: white;
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.messages .self {
+    text-align: right;
+    margin-left: auto;
+    background: #DDD;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.container {
+    border-radius: 2rem;
+}

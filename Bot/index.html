@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Simple ChatAI using RiveScript.js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="mt-5 mx-5">
+        <div class="">
+            <h2 style="color: blue;" class="text-center">TIM BOT</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md mt-4 py-5 chat container border text-center">
+                <div class="messages text-center"></div>
+                <div id="edge"></div>
+
+                <form class="actions">
+                    <div class="form-group w-2 mt-5">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="type Hello">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

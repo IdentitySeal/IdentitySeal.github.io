@@ -1,0 +1,38 @@
+! version = 2.0
+
++ hello
+- Hello, what is your name?
+
++ hi
+- Hi, what is your name?
+
++ my name is *
+- <set name=<star>>It's nice to meet you, <get name>.\n
+^ How old are you?
+
++ i am # years old
+- <set age=<star>>A lot of people are <get age> years old.\n
+^ To view your result, type result
+
++ result
+* <get age> == undefined => I don't know how old you are.
+* <get age> >  25 => You can do anything you want.
+* <get age> == 25 => You're old enough to rent a car with no extra fees.
+* <get age> >  21 => You're old enough to drink, but not rent a car.
+* <get age> == 21 => You're exactly old enough to drink.
+* <get age> >  18 => You're old enough to gamble, but not drink.
+* <get age> == 18 => You're exactly old enough to gamble.
+- You're not old enough to do much of anything yet.
+
+
++ thank you
+- you are welcome
+- welcome
+- no problem
+- no worries
+
++ *
+- Sorry did not get what you said
+- I am afraid that i can not understand you
+- I did not get it
+- Sorry can you please elaborate that for me
