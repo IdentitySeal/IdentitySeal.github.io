@@ -102,9 +102,11 @@
 
                                 <div class="col-md margt">
                                     <div class="row ">
-                                        <div class="col-sm-8 left-div"> <input type="text" class="form-control em-input" id="logo" placeholder="Upload file">
+                                        <div class="col-sm-8 left-div"> <input type="text" class="form-control em-input" id="logo" placeholder="Upload file" readonly>
                                         </div>
-                                        <div class="col-sm right-div"> <button class="btn new-btn m">Browse</button>
+                                        <div class="col-sm right-div">
+                                            <div class="btn new-btn m"> <input id="input" type="file" name="file" />Browse</div>
+
                                         </div>
                                         <!-- <div style='clear:both;'>&nbsp;</div> -->
 
@@ -401,7 +403,23 @@
     <!-- <script src="../../js/bootstrap-js/popper.js"></script>
     <script src="../../js/bootstrap-js/jquery.js"></script>
     <script src="../../js/bootstrap-js/bootstrap.js"></script> -->
-    
+    <script>
+        var input = document.getElementById('input');
+        var logo = document.getElementById('logo');
+
+        input.addEventListener('change', showFileName);
+
+        function showFileName(event) {
+
+            var input = event.srcElement;
+
+            var input = input.files[0].name;
+
+            document.getElementById("logo").placeholder = `${input}`
+
+            console.log(input)
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
