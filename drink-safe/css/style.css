@@ -1,0 +1,84 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-primary: #623ABD;
+    --roboto: "Roboto", sans-serif;
+    --gugi: "Gugi", cursive;
+}
+
+body {
+    font: 1rem/1.5 var(--roboto);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+
+/* Nav Bar */
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--color-black)
+}
+
+.navbar-dark .navbar-toggler {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+}
+
+
+/* Header Section */
+
+header {
+    padding: 15rem 0 100px;
+}
+
+.bg-img {
+    background: url("/images/adam-jaime-dmkmrNptMpw-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: static;
+    /* overflow: hidden; */
+    z-index: 1;
+    height: 650px;
+}
+
+.bg-img:before {
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    /* could also be absolute */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* width: 100%; */
+    background-image: linear-gradient( var(--color-primary), var(--color-primary), var(--color-primary), var(--color-primary));
+    opacity: 0.2;
+    height: 650px;
+}
+
+section {
+    padding: 150px 0;
+}
+
+
+/* CONTACT PAGE */
+
+.box-css {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    background: linear-gradient( var(--color-primary), #b79ef3);
+}
+
+.jumbotron {
+    border-radius: 1rem;
+}
+
+.jumbotron-form {
+    border-radius: 1rem;
+    margin-top: -90px;
+}
