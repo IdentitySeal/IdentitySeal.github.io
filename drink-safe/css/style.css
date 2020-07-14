@@ -27,6 +27,10 @@ body {
     background-color: var(--color-primary);
 }
 
+a:hover {
+    color: var(--color-black)
+}
+
 
 /* Header Section */
 
