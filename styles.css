@@ -58,13 +58,33 @@ ul li a:hover {
 	/* background-color: #fff; */
 }
 
-ul .nav-links .responsive-nav {
-	display: block;
-}
-
 @media screen and (max-width: 700px) {
+	ul.nav-links.responsive-nav {
+		/* display: block; */
+		display: flex;
+		flex-direction: column;
+		margin-top: 3rem;
+		height: auto;
+		position: absolute;
+		width: 70%;
+		background: aliceblue;
+		z-index: 3;
+		transition: .5s ease-in-out;
+		padding: 1rem;
+		border-radius: 1rem;
+	}
+	ul.nav-links.responsive-nav li {
+		padding-bottom: 1rem;
+		margin: 0;
+	}
 	ul.nav-links {
 		display: none;
+	}
+	ul.responsive-nav li a:hover {
+		color: #fff;
+		background: #304353;
+		padding: 0.5rem;
+		border-radius: .5rem;
 	}
 
 	.nav-bar .icon {
