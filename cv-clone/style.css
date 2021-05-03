@@ -1,0 +1,95 @@
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	margin: 1rem;
+}
+
+.flex-container > div {
+	padding: 1rem;
+}
+.flex-end {
+	display: flex;
+	justify-content: flex-end;
+}
+.center {
+	text-align: center;
+}
+h1 {
+	font-size: 32px;
+	font-family: Arial;
+	color: #4c4c4c;
+	background-color: transparent;
+	font-weight: 400;
+	font-style: normal;
+	font-variant: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 17.333333333333332px;
+	font-family: Arial;
+	color: #333333;
+	background-color: transparent;
+	font-weight: 700;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+}
+p,
+li,
+h3,
+span {
+	font-size: 14.666666666666666px;
+	font-family: Arial;
+	color: #333333;
+	background-color: transparent;
+	font-weight: 400;
+	font-style: normal;
+	font-variant: normal;
+	text-decoration: none;
+}
+
+span {
+	text-transform: uppercase;
+	color: #000000;
+}
+p.p-header {
+	font-size: 14.666666666666666px;
+	font-family: Arial;
+	color: #333333;
+	background-color: transparent;
+	font-weight: 700;
+	font-style: normal;
+	font-variant: normal;
+}
+.padding-bottom,
+li {
+	padding-bottom: 1rem;
+}
+.padding-top {
+	padding-top: 1rem;
+}
+h5 {
+	font-size: 17.333333333333332px;
+	font-family: Arial;
+	color: #333333;
+	background-color: transparent;
+	font-weight: 700;
+	font-style: normal;
+	font-variant: normal;
+	padding-top: 4.4rem;
+}
+
+@media screen and (max-width: 700px) {
+	.flex-container {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	h5 {
+		padding-top: 2.4rem;
+	}
+	h2 {
+		text-align: center;
+	}
+}
